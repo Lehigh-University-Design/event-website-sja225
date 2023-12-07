@@ -19,74 +19,42 @@
 </head>
 
  <!-- Navigation -->
- <div class="c-navigation__wrapper" id="navigation-wrapper">
-    <div class="c-navigation__container">
-        <div class="c-navigation">
-            <div class="c-navigation__innerContainer">
-                <div class="c-navigation__logoBlock">
-                    <a href="/Volumes/sja225/Web design/event-site-template-web1-main/Images/Vibrant Vortex Logo.png" target="_self">
-                        <img alt="Vibrant Vortex" class="" src="/Volumes/sja225/Web design/event-site-template-web1-main/Images/Vibrant Vortex Logo.png"
-                        width="205"
-                        height="149" >
-                    </a>
+ <body>
+    <div class="main-nav">
+        <div class="nav-left">
+            <a href="./index.html">
+                <img class="nav-logo" src="./Images/Vibrant Vortex Logo.png" />
+                <p class="nav-dates">
+                    Aug 10-12, 2024
+                </p>
+            </a>
 
-                    <span class="c-navigation-divider "></span>
+        </div>
+        <input id="toggle" type="checkbox" />
 
-                    <span class="c-navigation__dates">AUGUST 10-12, 2024</span>
-                </div>
-                <ul class="c-navigation__navList" id="nav-list">
-                                                    <li class="c-navigation__navItem" data-identifier="navitem3998">
-                        <a class="c-backstroke c-backstroke--music" href="music.html" target="_self">Music</a>
-                    </li>
-                                                    <li class="c-navigation__navItem" data-identifier="navitem3999">
-                        <a class="c-backstroke c-backstroke--passes-menu" href="passes.html" target="_self">Passes</a>
-                    </li>
-                                                    <li class="c-navigation__navItem" data-identifier="navitem4000">
-                        <a class="c-backstroke c-backstroke--plan" href="schedule.html" target="_self">Schedule</a>
-                    </li>
-                                                    <li class="c-navigation__navItem" data-identifier="navitem4001">
-                        <a class="c-backstroke c-backstroke--experience" href="grub.html" target="_self">Forest Grub</a>
-                    </li>
-                </ul>
-            </div>
+        <label for="toggle" class="hamburger">
+            <div class="top-bun"></div>
+            <div class="meat"></div>
+            <div class="bottom-bun"></div>
+        </label>
 
-            <button class="c-navigation__mobileButton c-navigation__mobileButton--close" id="mobile-nav-button">
-                <img alt="Hamburger Menu" class="c-navigation__mobileButtonImage deactivate" src="https://media.web.aegpresents.com/content/coachella-2023/icon-menu-light.svg">
-                <img alt="Close button" class="c-navigation__mobileButtonImage c-navigation__mobileButtonImage--close" src="https://media.web.aegpresents.com/content/coachella-2023/icon-close-nav.svg">
-            </button>
-
-            <div class="c-navigation__wrapper c-navigation__wrapperMobile fixed is-active" id="mobile-nav-container">
-
-                <div class="c-navigation__containerMobile">
-                    <div class="c-navigationMobile" id="navigation-mobile">
-                        <ul class="c-navigation__navListMobile activate" id="nav-list-mobile">
-                                                        <li class="c-navigation__navItem c-navigation__navItemMobile" data-identifier-mobile="navitemmobile3998">
-                                <a href="music.html" target="_self">Music</a>
-                            </li>
-                                                        <li class="c-navigation__navItem c-navigation__navItemMobile" data-identifier-mobile="navitemmobile3999">
-                                <a href="passes.html" target="_self">Passes</a>
-                            </li>
-                                                        <li class="c-navigation__navItem c-navigation__navItemMobile" data-identifier-mobile="navitemmobile4000">
-                                <a href="schedule.html" target="_self">Schedule</a>
-                            </li>
-                                                        <li class="c-navigation__navItem c-navigation__navItemMobile" data-identifier-mobile="navitemmobile4001">
-                                <a href="grub.html" target="_self">Forest Grub</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="nav">
+            <div class="nav-wrapper">
+                <nav class="nav-left">
+                    <a class="music" href="music.html">Music</a><br>
+                    <a class="passes" href="passes.html">Passes</a><br>
+                    <a class="schedule" href="schedule.html">Schedule</a><br>
+                    <a class="grub" href="grub.html">Forest Grub</a>
+                </nav>
             </div>
         </div>
     </div>
 
 <!--QnA on Front Page-->
-<body>
-    <header>
+    <div class="Grub-Background1">
         <p class="ForestGrub">Forest Grub</p>
-    </header>
 
-    <main>
-        <section>
+        <div>
              <p class="ForestGrubHeaderEntree">Entrée</p>
              <p class="Restaurant">Torchy's Tacos</p>
              <p class="Restaurant">Vicky's Vegan House</p>
@@ -97,9 +65,11 @@
              <p class="Restaurant">Frenchies</p>
              <p class="Restaurant">Luna's Grill</p>
              <p class="Restaurant">M's Burger Galore</p>
-        </section>
+        </div>
+    </div>
 
-        <section>
+    <div class="Grub-Background2">
+        <div>
             <p class="ForestGrubHeaderDesserts">Desserts</p>
             <p class="Restaurant">Dusty Biscuit</p>
             <p class="Restaurant">Emporium Pies</p>
@@ -107,17 +77,16 @@
             <p class="Restaurant">Bourbon Aficionado</p>
             <p class="Restaurant">Magic Fountain</p>
             <p class="Restaurant">Ralph's Italian Ice</p>
-        </section>
+        </div>
 
-        <section>
+        <div>
             <p class="ForestGrubHeaderBev"1>Coffee and Beverages</p>
             <p class="Restaurant">Highest Altitude</p>
             <p class="Restaurant">PJ's Coffee</p>
             <p class="Restaurant">Summer Moon</p>
             <p class="Restaurant">Union Bev</p>
-        </section>
-    </main>
-</body>
+        </div>
+    </div>
 
 </html>
 

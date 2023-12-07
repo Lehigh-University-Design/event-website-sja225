@@ -51,7 +51,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 100px;
+  margin: 0 100px;;
 }
 
 .nav {
@@ -61,6 +61,34 @@ h6 {
   font-family: 'Modak'; font-size: 1.5em;
 }
 
+.music{
+  color: #C5064B; /*Magenta*/
+  text-decoration: none;
+}
+
+.passes {
+  color: #17BEBB; /*Teal*/
+  text-decoration: none;
+}
+
+.schedule {
+  color: #FA8334; /*Orange*/
+  text-decoration: none;
+}
+
+.grub {
+  color: #FBFF12; /*Yellow*/
+  text-decoration: none;
+}
+
+ /*Divider HAVEN'T ADDED*/
+ .vl {
+  background-color: white;
+  content: "";
+  height: 100%;
+  position: absolute;
+}
+
 .nav-dates {
   font-family: 'Modak'; font-size: 1.5em;
   color: #FBFF12; 
@@ -68,6 +96,9 @@ h6 {
 
 .nav-logo {
   width: 300px;
+  height: auto;
+  margin-left: 0em;
+  margin-bottom: 0em;
 }
 
 #toggle {
@@ -112,7 +143,7 @@ h6 {
     width: 3em;
     height: 7px;
     border-radius: 3px;
-    background-color: #f8982b;
+    background-color: #FFFBFA;
     margin-top: 8px;
     transition: all 0.3s ease-in-out;
   }
@@ -149,8 +180,8 @@ h6 {
   nav a {
     position: relative;
     text-decoration: none;
-    color: black;
-    font-size: 2em;
+    color: white;
+    font-size: 1em;
     display: inline-block;
     margin-top: 1.25em;
     transition: color 0.2s ease-in-out;
@@ -160,7 +191,6 @@ h6 {
   nav a:before {
     content: '';
     height: 0;
-    position: absolute;
     width: 0.25em;
     background-color: white;
     left: -0.5em;
@@ -174,6 +204,7 @@ h6 {
   nav a:hover:before {
     height: 100%;
   }
+
 
   /**
 Animations
@@ -227,7 +258,6 @@ html {
   height: 2053;
 
   padding: 20em;
-  margin-top: 2em;
   margin-bottom: 5em;
 }
 
@@ -257,69 +287,57 @@ html {
   border: none;
 }
 
-.IndexQuestion1Row {
+
+/*Q&A ON HOME PAGE*/
+.IndexQuestionRow {
   display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
-.IndexQuestion1Column{
-  flex: 50%;
+@media (max-width: 1300px) {
+  .IndexQuestionRow {
+    flex-direction: column;
+  }
+
+  .questionRow2 {
+    flex-direction: column-reverse;
+  }
+
+
 }
 
 .VibrantVortexQuestion {
   color: #C5064B;
-  font-size: 48px;
+  font-size: 45px;
   font-family: 'Modak';
   font-weight: normal;
   text-shadow: 0px 2px 60px #C5064B;
-  margin-left: 1em;
+  margin-left: 2.5em;
 }
 
 .VibrantVortexAnswer {
   color: #FFFBFA;
-  margin-left: 2.2em;;
+  margin-left: 4.8em;
   width: 20em; 
   font-size: 24px;
   line-height: 40px;
 }
 
-.UFOpng { /*Media Quiery Underneath*/
-  display: flex;
-  justify-content: flex-end;
-  width: 1019px;
-  height: 636px; 
-  /*width: 392px;
-  height: 496px;*/
-
-  padding: 2em;
-}
-
-.IndexQuestion2Row {
-  display: flex;
-}
-
-.IndexQuestion2Column{
-  flex: 50%;
-}
-
 .SleepingStarsQuestion {
   color: #C5064B;
-  font-size: 48px;
+  font-size: 45px;
   font-family: 'Modak';
   font-weight: normal;
   text-shadow: 0px 2px 60px #C5064B;
   text-align: right;
 
-  display: flex;
-  justify-content: flex-end;
-  margin: auto;
+  padding-top: 1em;
+  margin-right: 2em;
 }
 
 .SleepingStarsAnswer {
   color: #FFFBFA;
-  
-  display: flex;
-  justify-content: flex-end;
-  margin: auto;
 
   width: 20em; 
   text-align: right;
@@ -329,49 +347,188 @@ html {
 
 .MOONpng {
   display: flex;
-  justify-content: flex-start;
-  margin: auto;
+  justify-content: center;
 
-  width: 392px;
-  height: 362px;
+  padding-top: 6em;
+  margin-left: 5em;
+  width: 500px;
+  height: 100%;
+
+  padding-left: 2em;
 }
+
+
+
 
 .Subscribe{
   color: #FA8334;
   font-size: 48px;
   font-family: 'Modak';
   font-weight: normal;
+  margin-left: 1.9em;
+  margin-top: 0.5em;
 }
 
-.EmailText{
+/* Interactive Email Box*/
+#EmailBox{
+  overflow: hidden;
+  background-color:#FFFBFA;
+  
+  height: 60px;
+  border-radius: 15px;
+  margin: 1.3em;
+  margin-left: 5.2em;
+  margin-right: 5.2em;
+  margin-top: 0.4em;
+  display: flex;
+}
+
+/* Interactive Email Type*/
+#EmailBox a {
+  display: flex;
   color: #151414;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Interactive Email Type - Aesthetics */
+#EmailBox input[type="text"] {
+  float: center;
+  padding-left: 20px;
+  padding-top: 10px;
+  border: none;
   font-family: 'Inconsolata'; font-size: 32px;
+}
+
+#EmailBox input[placeholder="Email Address"] {
+  padding-left: 20px;
+  padding-top: 10px;
+  border: none;
+  font-family: 'Inconsolata'; font-size: 32px;
+  font-weight: 500;
+  width: 100%;
+}
+
+
+.sign-up-button{
+  background-color: #FA8334; /* Orange */
+  color: #FFFBFA;
+  border-radius: 12px;
+  overflow: hidden;
+
+  font-family: 'Inconsolata'; font-size: 16px;
   font-weight: 900;
-  margin-top: 10px;
+  text-align: center;
+  color: #FFFBFA;
 
   display: flex;
-  justify-content: left;
-
-  border-radius: 15px;
-
-  padding-left: 20px;
+  justify-content: center;
+  margin-left: 5.25em;
   padding-top: 12px;
+  padding-bottom: 12px;
+  width: 88.5%;
+
+
   border: none;
+  text-decoration: none;
 }
 
-#SubscribeBox{
-  width:1518px;
-  height:85px;
-  background:#FFFBFA;
-  font-family: 'Inconsolata';
-  margin: 1.3em;
-  border-radius: 15px;
+/*Footer*/
 
+.Footer{
+  background-color: #151414;
+  padding: 0.2em;
+  margin-top: 2em;
 }
+
+hr {
+  height: 2px;
+  margin-top: 20px;
+  background-color: gray;
+  border-color: gray;
+  margin-left: 3.5em;
+  margin-right: 3.5em;
+}
+
+.bottom-line {
+  margin-top: 25px;
+}
+
+.FAQLogo {
+  margin-top: 1em;
+  margin-left: 5.5em;
+  width: 300px;
+  height: auto;
+}
+
+.FAQ-text{
+  color: #FFFBFA;
+  font-family: 'Inconsolata'; font-size: 32px;
+  margin-left: 3em;
+  padding-bottom: 0.2em;
+}
+
+.year-text{
+  color: #C5064B;
+  font-family: 'Inconsolata'; font-size: 32px;
+  margin-left: 3em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* unvisited link */
+.FAQ-text a:link {
+  color: #C5064B;
+}
+
+/* visited link */
+.FAQ-text a:visited {
+  color: #C5064B;
+}
+
+/* mouse over link */
+.FAQ-text a:hover {
+  color: #FFFBFA;
+}
+
+/* selected link */
+.FAQ-text a:active {
+  color: #FFFBFA;
+}
+
+.Disclaimer-Border{
+  background-color: black;
+  margin-top: 2em;
+  margin-bottom: 0em;
+}
+
+.Disclaimer {
+  color: #FFFBFA;
+  font-family: 'Inconsolata'; font-size: 16px;
+  display: flex;
+  justify-content: center;
+  margin-left: 5.7em;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+
 
 /* MUSIC PAGE */
-.MusicBackground {
-  background-image: url(concert_background_2.png);
+.MusicBackground { /*20 em for Large Desktop*/
+  background: url(./Images/concert_background_2.png), lightgray 50% / cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.60);
+  
+  width: 1837;
+  height: 2053;
+  
+  padding-top: 8em;
+  padding-bottom: 3em;
+  padding-left: 5em;
+  padding-right: 5em;
+  margin-top: 0em;
+  margin-bottom: 0em;
 }
 
 .MusicLineup {
@@ -396,25 +553,25 @@ html {
   box-shadow: 0px 0px 98px 12px #C5064B;
 }
 
- /*Line - in between headliners ADD ANOTHER*/
- .vl {
+.Divider {
+  background-color: #FBFF12;
   box-shadow: 1px 1px 3px #FBFF12;
-  height: 42px;
   border-left: 3px solid #FBFF12;
-  position: absolute;
-  left: 28%;
-  margin-left: -3px;
+  height: 62px;
+  width: 3px
 }
 
-.Headliners {
+.Headliner-Section{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
     .PostMalone {
         font-family: 'Inconsolata';
+        font-size: 48px;
         font-style: normal;
         font-weight: 700;
-        font-size: 48px;
         line-height: 50px;
       
         color: #FFFBFA;
@@ -441,9 +598,12 @@ html {
 
         margin-bottom: 2em;
       }
-}
+
 
 .Artists{
+  display: flex;
+  flex-direction: column;
+
   color: #FFFBFA;
   font-family:'Inconsolata';
   font-size: 36px;
@@ -459,6 +619,42 @@ html {
 }
 
 /*PASSES*/
+
+.background-image-passes1{
+  background: url(./Images/concert_background_1.png), lightgray 50% / cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.60);
+  
+  width: 1837;
+  height: 2053;
+  
+  padding-left: 12em;
+  padding-right: 12em;
+  padding-top: 8em;
+  padding-bottom: 2em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.background-image-passes2{
+  background: url(./Images/concert_background_8.png), lightgray 50% / cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.60);
+  
+  width: 1837;
+  height: 2053;
+  
+  padding-top: 2em;
+  padding-left: 12em;
+  padding-right: 12em;
+  padding-bottom: 20em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+
 .Passes{
   color: #FFFBFA;
   font-family: 'Modak'; font-size: 36px;
@@ -471,7 +667,7 @@ html {
   justify-content: center;
   margin: auto;
 
-  margin-bottom: 2em;
+  margin-bottom: 3em;
   padding: 15px 15px;
   text-align: center;
 
@@ -486,14 +682,14 @@ html {
   font-size: 48px;
   font-family: 'Modak';
   font-weight: normal;
-  margin-left: 2em;
+  
 }
 
 .PassSubHeading {
   color: #FFFBFA;
   font-family: 'Inconsolata'; font-size: 30px;
   font-weight: medium;
-  margin-left: 7em;
+  margin-left: 20px;
   margin-bottom: 0.5em;
 }
 
@@ -501,7 +697,7 @@ html {
   color: #FFFBFA;
   font-family: 'Inconsolata'; font-size: 24px;
   font-weight: regular;
-  margin-left: 5.5em;
+  margin-left: 30px;
   margin-bottom: 0.5em;
 }
 
@@ -514,7 +710,92 @@ html {
   margin-bottom: 0.5em;
 }
 
+.PassContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.PassColumn {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.PassColumnButton {
+  flex-grow: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.buy-tickets-button{
+  background-color: #FA8334; /* Orange */
+  color: #FFFBFA;
+  border-radius: 12px;
+  overflow: hidden;
+
+  font-family: 'Inconsolata'; font-size: 16px;
+  font-weight: 900;
+  text-align: center;
+  color: #FFFBFA;
+  
+  display: inline-flex; 
+
+  padding: 10px 20px; /* Adjust as needed */
+
+
+ 
+  /*margin-left: 5.25em;
+  padding-top: 12px;
+  padding-bottom: 12px;*/
+
+  
+  border: none;
+  text-decoration: none;
+}
+
 /*Schedule*/
+.Schedule-Background1{
+  background: url(./Images/concert_background_5.png), lightgray 50% / cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.60);
+  
+  width: 1837;
+  height: 2053;
+  
+  padding-left: 8em;
+  padding-right: 10em;
+  padding-top: 8em;
+  padding-bottom: 2em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+/*.Schedule-Background2{
+  background: url(./Images/concert_background_7.png), lightgray 50% / cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.60);
+  
+  width: 1837;
+  height: 2053;
+  
+  padding-left: 8em;
+  padding-right: 14em;
+  padding-top: 0em;
+  padding-bottom: 2em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}*/
+
 .Schedule{
   color: #FFFBFA;
   font-family: 'Modak'; font-size: 36px;
@@ -537,21 +818,25 @@ html {
   box-shadow: 0px 0px 98px 12px #FA8334;
 }
 
-.ScheduleMonth {
-  color: #FFFBFA;
-  font-family: 'Inconsolata'; font-size: 80px;
-  font-weight: bold;
-
-  margin-left: 1.5em;
+.Month-and-Date {
+  width: 3in;
+  height: auto;
 }
 
-.ScheduleDay {
-  color: #FFFBFA;
-  font-family: 'Modak'; font-size: 96px;
-  font-weight: regular;
+.Schedule-Column1{
+  padding: 1em;
+  display: flex;
+  justify-content: left;
+  margin: auto;
+  position: absolute;
+}
 
-  margin-left: 2.5em;
-  margin-bottom: 0.5em;
+.Schedule-Column2{
+  padding: 1em;
+  display: flex;
+  justify-content: right;
+  
+  
 }
 
 .date {
@@ -654,6 +939,38 @@ html {
 }
 
 /* FOREST GRUB */
+.Grub-Background1{
+  background: url(images/concert_background_6.png), lightgray 50% / cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.60);
+
+  width: 1837;
+  height: 2053;
+
+  padding-top: 8em;
+  padding-bottom: 2em;
+  padding-left: 20em;
+  padding-right: 20em;
+  margin-top: 2em;
+}
+
+.Grub-Background2{
+  background: url(images/concert_background_8.png), lightgray 50% / cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.60);
+
+  width: 1837;
+  height: 2053;
+
+  padding-top: 1em;
+  padding-bottom: 10em;
+  padding-left: 20em;
+  padding-right: 20em;
+  margin-bottom: 0em;
+}
+
 .ForestGrub {
   color: #2D0B63;
   font-family: 'Modak'; font-size: 36px;
@@ -666,7 +983,7 @@ html {
   justify-content: center;
   margin: auto;
 
-  margin-bottom: 2em;
+  margin-bottom: 0em;
   padding: 15px 15px;
   text-align: center;
 
@@ -688,7 +1005,7 @@ html {
   color: #17BEBB;
   font-family: 'Modak'; font-size: 36px;
   font-weight: regular;
-  margin-top: 2em;
+  margin-top: 0em;
   margin-left: 1.3em;
 }
 
@@ -705,9 +1022,25 @@ html {
   font-family: 'Inconsolata'; font-size: 24px;
   font-weight: bold;
   margin-left: 2em;
+  margin-bottom: 0em;
 }
 
 /*FAQ PAGE*/
+.FAQ-Background{
+  background: url(images/concert_background_4.png), lightgray 50% / cover no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.60);
+
+  width: 1837;
+  height: 2053;
+
+  padding-top: 8em;
+  padding-bottom: 2em;
+  padding-left: 10em;
+  padding-right: 10em;
+  margin-top: 2em;
+}
 
 .FAQHeadline {
   color: #FFFBFA;
@@ -732,7 +1065,7 @@ html {
   color: #FFFBFA;
   font-family: 'Inconsolata'; font-size: 28px;
   font-weight: regular;
-  padding-left: 1em;
+  padding-left: 1.8em;
   padding-bottom: 1em;
 }
 
@@ -740,32 +1073,27 @@ html {
   color: #FFFBFA;
   font-family: 'Inconsolata'; font-size: 18px;
   font-weight: regular;
-  padding-left: 2.9em;
+  padding-left: 2.7em;
   padding-bottom: 1em;
 }
 
 .PinterestButton {
+  background-color: #FA8334; /* Orange */
+  border-radius: 15px;
 
-/* PINTEREST Text */
-
-  color: #FFFBFA;
-  font-family: 'Inconsolata';
+  font-family: 'Inconsolata'; font-size: 32px;
+  font-weight: 900;
   font-style: normal;
   text-align: center;
+  color: #FFFBFA;
 
-  margin-left: 3.4em;
-  margin-top: 1em;
+  display: flex;
+  justify-content: left;
+  margin-left: 2em;
   margin-bottom: 1em;
 
-/* Button */
-
-position: absolute;
-width: 400px;
-height: 96px;
-
-background: #FA8334;
-border-radius: 15px;
-border: none;
+  padding: 0.5em 3em;
+  border: none;
 }
 
 
@@ -825,32 +1153,10 @@ p{
   list-style-type: none
 }
 
-/*Footer*/
-.button {
-  background-color: #FA8334; /* Orange */
-  border: none;
-  color: #FFFBFA;
-  padding: 12px 745px;
-  text-align: left;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
 
-hr {
-  height: 2px;
-  margin-top: 20px;
-  background-color: gray;
-  border-color: gray;
-}
 
-.bottom-line {
-  margin-top: 25px;
-}
 
-.FAQLogo {
-  margin: 2em;
-}
+
 
 
 
@@ -870,18 +1176,5 @@ hr {
 /*Macbook Dimensions
 2560 x 1600
 /*
-
-.c-navigation__navItemMobile {
-  text-align: left;
-  margin-left: 25px;
-  font-family: Carena,sans-serif;
-}
-
-@media (min-width: 768px)
-.c-navigation__navItem {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 700;
-}
 
 */

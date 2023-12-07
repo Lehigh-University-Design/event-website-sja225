@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
     <title>Vibrant Vortex Music Festival</title>
     <meta property="og:type" content="website">
     <meta property="og:title" content="Vibrant Vortex">
@@ -19,62 +19,33 @@
 </head>
 
  <!-- Navigation -->
- <div class="c-navigation__wrapper" id="navigation-wrapper">
-    <div class="c-navigation__container">
-        <div class="c-navigation">
-            <div class="c-navigation__innerContainer">
-                <div class="c-navigation__logoBlock">
-                    <a href="/Volumes/sja225/Web design/event-site-template-web1-main/Images/Vibrant Vortex Logo.png" target="_self">
-                        <img alt="Vibrant Vortex" class="" src="/Volumes/sja225/Web design/event-site-template-web1-main/Images/Vibrant Vortex Logo.png"
-                        width="205"
-                        height="149" >
-                    </a>
+ <body>
+    <div class="main-nav">
+        <div class="nav-left">
+            <a href="./index.html">
+            <img class="nav-logo" src="./Images/Vibrant Vortex Logo.png" />
+            <p class="nav-dates">
+                Aug 10-12, 2024
+            </p>
+            </a>
 
-                    <span class="c-navigation-divider "></span>
+        </div>
+        <input id="toggle" type="checkbox" />
 
-                    <span class="c-navigation__dates">AUGUST 10-12, 2024</span>
-                </div>
-                <ul class="c-navigation__navList" id="nav-list">
-                                                    <li class="c-navigation__navItem" data-identifier="navitem3998">
-                        <a class="c-backstroke c-backstroke--music" href="music.html" target="_self">Music</a>
-                    </li>
-                                                    <li class="c-navigation__navItem" data-identifier="navitem3999">
-                        <a class="c-backstroke c-backstroke--passes-menu" href="passes.html" target="_self">Passes</a>
-                    </li>
-                                                    <li class="c-navigation__navItem" data-identifier="navitem4000">
-                        <a class="c-backstroke c-backstroke--plan" href="schedule.html" target="_self">Schedule</a>
-                    </li>
-                                                    <li class="c-navigation__navItem" data-identifier="navitem4001">
-                        <a class="c-backstroke c-backstroke--experience" href="grub.html" target="_self">Forest Grub</a>
-                    </li>
-                </ul>
-            </div>
+        <label for="toggle" class="hamburger">
+            <div class="top-bun"></div>
+            <div class="meat"></div>
+            <div class="bottom-bun"></div>
+        </label>
 
-            <button class="c-navigation__mobileButton c-navigation__mobileButton--close" id="mobile-nav-button">
-                <img alt="Hamburger Menu" class="c-navigation__mobileButtonImage deactivate" src="https://media.web.aegpresents.com/content/coachella-2023/icon-menu-light.svg">
-                <img alt="Close button" class="c-navigation__mobileButtonImage c-navigation__mobileButtonImage--close" src="https://media.web.aegpresents.com/content/coachella-2023/icon-close-nav.svg">
-            </button>
-
-            <div class="c-navigation__wrapper c-navigation__wrapperMobile fixed is-active" id="mobile-nav-container">
-
-                <div class="c-navigation__containerMobile">
-                    <div class="c-navigationMobile" id="navigation-mobile">
-                        <ul class="c-navigation__navListMobile activate" id="nav-list-mobile">
-                                                        <li class="c-navigation__navItem c-navigation__navItemMobile" data-identifier-mobile="navitemmobile3998">
-                                <a href="music.html" target="_self">Music</a>
-                            </li>
-                                                        <li class="c-navigation__navItem c-navigation__navItemMobile" data-identifier-mobile="navitemmobile3999">
-                                <a href="passes.html" target="_self">Passes</a>
-                            </li>
-                                                        <li class="c-navigation__navItem c-navigation__navItemMobile" data-identifier-mobile="navitemmobile4000">
-                                <a href="schedule.html" target="_self">Schedule</a>
-                            </li>
-                                                        <li class="c-navigation__navItem c-navigation__navItemMobile" data-identifier-mobile="navitemmobile4001">
-                                <a href="grub.html" target="_self">Forest Grub</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="nav">
+            <div class="nav-wrapper">
+                <nav class="nav-left">
+                    <a class="music" href="music.html">Music</a><br>
+                    <a class="passes" href="passes.html">Passes</a><br>
+                    <a class="schedule" href="schedule.html">Schedule</a><br>
+                    <a class="grub" href="grub.html">Forest Grub</a>
+                </nav>
             </div>
         </div>
     </div>
@@ -82,92 +53,169 @@
 
 <!--QnA on Front Page-->
 
-<header>
-    <p class="Passes">Passes</p>
-</header>
+<div class="Pass-Content">   
+    <div class="background-image-passes1">
 
-<body>
-    <main>
+        <section>
+            <p class="Passes">Passes</p>
+        </section>
 
         <section>
             <p class="FestivalPass">2024 Festival Passes</p>
         </section>
 
-        <section>
-            <p class="PassHeading">General Admission</p>
-            <p class="PassSubHeading">$149 - Weekend Pass</p>
-        <ul>
-            <li class="PassParagraph">Allows entrance to the venue and day parking lots all three days</li>
-        </ul>
-        </section>
+        <!-- wrapped in a container -->
+        <div class="PassContainer">
+            <!-- see how both columns are their own container -->
+            <!-- left column -->
+            <div class="PassColumn">
+                <p class="PassHeading">General Admission</p>
+                <p class="PassSubHeading">$149 - Weekend Pass</p>
+                <ul>
+                    <li class="PassParagraph">Allows entrance to the venue</li>
+                    <li class="PassParagraph">Includes day parking lots all three days</li>
+                    </ul>  
+                    
+            </div>
+            <!-- right column -->
+            <div class="PassColumn2">
+            <button type="button" class="buy-tickets-button" onclick="alert('you have bought your ticket')">BUY TICKETS</button>
+            </div>
+        </div>
 
-        <section>
-            <p class="PassHeading">VIP</p>
-            <p class="PassSubHeading">$299 - Weekend Pass</p>
-            <ul>
-                <li class="PassParagraph">Exclusive VIP access with elevated viewing </li>
-                <li class="PassParagraph">VIP lounges and dedicated bars</li>
-                <li class="PassParagraph">Private restroom facilities</li>
-            </ul>
-        </section>
+        <div class="PassContainer">
+            <div class="PassColumn">
+                <p class="PassHeading">VIP</p>
+                <p class="PassSubHeading">$299 - Weekend Pass</p>
+                <ul>
+                    <li class="PassParagraph">Exclusive VIP access with elevated viewing </li>
+                    <li class="PassParagraph">VIP lounges and dedicated bars</li>
+                    <li class="PassParagraph">Private restroom facilities</li>
+                </ul>
+            </div>
+            <div class="PassColumn2">
 
-        <section>
-            <p class="PassHeading">Camping Pass</p>
-            <p class="PassSubHeading">$50 per person - Weekend Pass</p>
-            <ul>
-                <li class="PassParagraph">Camp on festival grounds for the full immersive experience</li>
-                <li class="PassParagraph">Access to shower and restroom facilities in the camping area</li>
-            </ul>
-        </section>
+                <button type="button" class="buy-tickets-button" onclick="alert('you have bought your ticket')">BUY TICKETS</button>
 
-        <section>
-            <p class="PassHeading">VIP Tree House Pass</p>
-            <p class="PassSubHeading">85 per person - Weekend Pass</p>
-            <ul>
-                <li class="PassParagraph">Camp in the trees for the sky rise immersive journey</li>
-                <li class="PassParagraph">Access to shower and restroom facilities in the camping areay</li>
-                <li class="PassParagraph">3 person minimum</li>
-            </ul>
-        </section>
+            </div>
+        
 
-        <section>
-            <p class="PassHeading">Single Night Pass</p>
-            <p class="PassSubHeading">$75 - Day Pass</p>
-            <ul>
-                <li class="PassParagraph">Enjoy a single day of the festival</li>
-            </ul>
-        </section>
+        </div>
 
-        <section>
-            <p class="PassHeading">All-You-Can-Eat Pass</p>
-            <p class="PassSubHeading">$300 - Weekend Pass</p>
-            <ul>
-                <li class="PassParagraph">Stock up with an all you can eat food truck pass</li>
-                <li class="PassParagraph">Indulge on an open bar</li>
-            </ul>
-        </section>
+        <div class="PassContainer">
+            <div class="PassColumn">
+                <p class="PassHeading">Camping Pass</p>
+                <p class="PassSubHeading">$50 per person - Weekend Pass</p>
+                <ul>
+                    <li class="PassParagraph">Camp on festival grounds for the full immersive experience</li>
+                    <li class="PassParagraph">Access to shower and restroom facilities in the camping area</li>
+                </ul>
+            </div>
+             <div class="PassColumn2">
+
+                <button type="button" class="buy-tickets-button" onclick="alert('you have bought your ticket')">BUY TICKETS</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="background-image-passes2">
+
+        <div class="PassContainer">
+            <div class="PassColumn">
+                <p class="PassHeading">VIP Tree House Pass</p>
+                <p class="PassSubHeading">85 per person - Weekend Pass</p>
+                <ul>
+                    <li class="PassParagraph">Camp in the trees for the sky rise immersive journey</li>
+                    <li class="PassParagraph">Access to shower and restroom facilities in the camping areay</li>
+                    <li class="PassParagraph">3 person minimum</li>
+                </ul>
+            </div>
+        
+            <div class="PassColumn2">
+
+                <button type="button" class="buy-tickets-button" onclick="alert('you have bought your ticket')">BUY TICKETS</button>
+
+            </div>
+
+        </div>
+
+        <div class="PassContainer">
+            <div class="PassColumn">
+                <p class="PassHeading">Single Night Pass</p>
+                <p class="PassSubHeading">$75 - Day Pass</p>
+                <ul>
+                    <li class="PassParagraph">Enjoy a single day of the festival</li>
+                    <li class="PassParagraph">Experience a night under the stars</li>
+                </ul>
+            </div> 
+
+            <div class="PassColumn2">
+                <button type="button" class="buy-tickets-button" onclick="alert('you have bought your ticket')">BUY TICKETS</button>
+            </div>
+        </div>
+        <div class="PassContainer">
+            <div class="PassColumn">
+                <p class="PassHeading">All-You-Can-Eat Pass</p>
+                <p class="PassSubHeading">$300 - Weekend Pass</p>
+                <ul>
+                    <li class="PassParagraph">Stock up with an all you can eat food truck pass</li>
+                    <li class="PassParagraph">Indulge on an open bar</li>
+                </ul>
+            </div> 
+            <div class="PassColumn2">
+                <button type="button" class="buy-tickets-button" onclick="alert('you have bought your ticket')">BUY TICKETS</button>
+            </div>
+        </div>
     
         <!-- The main content of your website goes here based on your figma design file-->
-    </main>
+    </div>
+</div>
 
-    <footer>
+<footer>
+    <div class="Footer">
+        <div>
+            <p class="Subscribe">Subscribe</p>
+            <div id="EmailBox">
+                <input type="text" placeholder="Email Address" size="auto">
+                    <!--<p class="EmailText">Email Address</h2>-->
+            </div>
+            
+                <button type="button" class="sign-up-button" onclick="alert('you have signed up')">SIGN UP</button>
 
-        <a href="">
-            <img alt="Vibrant Vortex Logo" class src="">
-             <!-- Add logo, navigation, logo, or other header elements here based on your figma design file-->
-        </a>
-
+        </div>
+    
         <hr class="bottom_line">
 
-        <section>
-            <h2>
-               <a href="faq.html" target="_blank">FAQ</a>
-            </h2>
-            <h2>©2023</h2>
-        </section>
-    </footer>
+        <div>
 
-</body>
+            <a href="/Volumes/sja225/Web design/event-site-template-web1-main/Images/Vibrant Vortex Logo.png">
+                <img class="FAQLogo" alt="Vibrant Vortex Logo"
+                    src="/Volumes/sja225/Web design/event-site-template-web1-main/Images/Vibrant Vortex Logo.png"
+                    width="411" height="299">
+                <!-- Add logo, navigation, logo, or other header elements here based on your figma design file-->
+            </a>
+
+        </div>
+
+        <div>
+            <p class="FAQ-text">
+                <a href="faq.html" target="_blank">FAQ</a>
+            </p>
+            <p class="year-text">©2023</p>
+        </div>
+    </div>
+
+    <div class="Disclaimer-Border">
+        <p class="Disclaimer">This is a school project at Lehigh University</p>
+        <p class="Disclaimer">Images are from either from generative AI or created by hand</p>
+        <p class="Disclaimer">Most of the text is generated by AI </p>
+    </div>
+
+</footer>
+
 
 </html>
 
